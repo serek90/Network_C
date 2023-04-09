@@ -1,4 +1,21 @@
+/*
+ * author: jseroczy
+ *
+ * description: program uisng libpcap to print all
+ * comunication interfaces located on the system
+ *
+ */
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <pcap.h>
+#include <errno.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+
+void print_interfaces(pcap_if_t *inter)
+{
         printf("Interfaces on the system:\n");
 
         while(inter)
